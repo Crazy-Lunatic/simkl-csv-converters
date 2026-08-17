@@ -11,7 +11,7 @@ With Trakt's recent move to restrict API access for free users, directly syncing
 | **`convert_trakt_to_simkl.py`** | Trakt `.zip` Export (`watched-history-*.json`) | Extracts and formats movie and television watch history from official Trakt JSON archives. |
 | **`convert_tautulli_to_simkl.py`** | Tautulli SQLite Database (`tautulli.db`) | Queries local Plex stream logs directly from Tautulli with support for user and date filtering. |
 
-## 🚀 Features
+## Features
 * **Zero Dependencies:** Uses only built-in Python libraries (`sqlite3`, `json`, `csv`, `glob`, `argparse`). No `pip install` required.
 * **Safe Database Access:** The Tautulli script queries the local `tautulli.db` using read-only URI mode (`?mode=ro`) to prevent database locking or corruption while Tautulli is actively running.
 * **Accurate ID Matching:** Extracts `TMDB`, `IMDB`, and `TVDB` IDs from Trakt exports for near-flawless matching on Simkl's end.

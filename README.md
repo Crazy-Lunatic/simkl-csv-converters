@@ -4,16 +4,16 @@ A lightweight, zero-dependency Python script to convert your Trakt.tv data expor
 
 With Trakt's recent move to restrict API access for free users, directly syncing data via API (using tools like `plextraktsync`) has become complicated or entirely broken for many. This script provides an offline, completely free workaround by converting your official Trakt data export into a CSV schema that Simkl natively understands.
 
-## 🚀 Features
+## Features
 * **Zero Dependencies:** Uses only built-in Python libraries (`json`, `csv`, `glob`). No `pip install` required.
 * **Accurate ID Matching:** Extracts `TMDB`, `IMDB`, and `TVDB` IDs from your Trakt data for near-flawless matching on Simkl's end.
 * **Fixes the "Watching" Bug:** Automatically hardcodes the `Watchlist` status to `completed` so Simkl doesn't incorrectly tag your entire history as currently watching.
 * **Strict Formatting:** Adheres exactly to Simkl's required headers, including the specific `s1e1` format for episodic data.
 
-## 📋 Prerequisites
+## Prerequisites
 * **Python 3.x** installed on your system.
 
-## 🛠️ Step-by-Step Migration Guide
+## Step-by-Step Migration Guide
 
 ### Step 1: Export Your Data from Trakt
 1. Log into your Trakt account.
@@ -39,7 +39,7 @@ The script will scan for all `watched-history-*.json` files and compile them int
 2. Upload the newly generated `simkl_import.csv` file.
 3. Review your newly imported data!
 
-## 🗂️ Data Schema Reference
+## Data Schema Reference
 For reference, this script automatically formats your data to match the strict column headers expected by Simkl:
 
 | simkl_id | TVDB_ID | TMDB | IMDB_ID | MAL_ID | Type | Title | Year | LastEpWatched | Watchlist | WatchedDate | Rating | Memo |
@@ -47,7 +47,7 @@ For reference, this script automatically formats your data to match the strict c
 | | | 1340138 | tt1340138 | | movie | Terminator Genisys | 2015 | | completed | 2015-08-20 | | |
 | | 276562 | | | | tv | Power | 2014 | s2e2 | completed | 2015-08-21 | | |
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 **Q: I uploaded to Simkl, but it says I am currently watching everything.**
 **A:** This happens if the `Watchlist` column is missing or incorrectly formatted. Ensure you are using the latest version of this script, which hardcodes the status to `completed`.
 

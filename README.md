@@ -23,13 +23,13 @@ With Trakt's recent move to restrict API access for free users, directly syncing
 
 ### Step 2: Prepare the Script
 1. Extract the downloaded Trakt `.zip` file into a new folder.
-2. Place the `convert.py` script from this repository into the **same folder** as your extracted JSON files.
+2. Place the `convert_trakt_to_simkl.py` script from this repository into the **same folder** as your extracted JSON files.
 
 ### Step 3: Run the Conversion
 Open your terminal or command prompt, navigate to the folder, and run:
 
 ```bash
-python3 convert.py
+python3 convert_trakt_to_simkl.py
 ```
 
 The script will scan for all `watched-history-*.json` files and compile them into a new file named `simkl_import.csv`.
